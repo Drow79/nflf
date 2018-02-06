@@ -1,0 +1,218 @@
+/* North Florida Literacy Festival Placeholder Cascading Style Sheet
+ * Authored by Aidan S (aidans80@outlook.com) */
+
+/* General Rules */
+* {
+   -webkit-box-sizing: border-box;
+   -moz-box-sizing: border-box;
+   box-sizing: border-box;
+}
+html, body {
+   margin: 0;
+   padding: 0;
+   height: 100%;
+}
+body {
+   font-family: Verdana, Geneva, sans-serif;
+   font-size: 14px;
+   color: #111;
+   background-color: #000;
+   background-image: url(images/Books_HD_8314929977.jpg);
+   background-size: cover;
+   background-attachment: fixed;
+   background-position: center;
+   background-repeat: no-repeat;
+}
+a:link, a:visited {
+   text-decoration: underline;
+   color: #FF0000;
+}
+a:hover, a:active {
+   color: #036B93;
+}
+h1, h2, h3, h4, h5, h6, th {
+   color: #FFF;
+   font-family: "Lucida Sans Regular", "Lucida Sans", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+   margin-top: 0;
+   margin-bottom: 0;
+}
+p {
+   margin-top: 0;
+}
+img {
+   border: none;
+   vertical-align: middle;
+}
+iframe {
+   border: none;
+}
+table {
+   border-collapse: collapse;
+}
+
+/* Structure */
+#splash {
+   background-image: url(images/Books_HD_8314929977.jpg);
+}
+#page-container {
+   width: 100%;
+   height: auto !important;
+   height: 100%;
+   min-height: 100%;
+   position: absolute;
+   right: 0;
+   left: 0;
+}
+#splash #page-container {
+   background: -moz-radial-gradient(center, ellipse cover, rgba(255,255,255,1) 0%, rgba(255,255,255,0.4) 100%); /* FF3.6-15 */
+   background: -webkit-radial-gradient(center, ellipse cover, rgba(255,255,255,1) 0%,rgba(255,255,255,0.4) 100%); /* Chrome10-25,Safari5.1-6 */
+   background: radial-gradient(ellipse at center, rgba(255,255,255,1) 0%,rgba(255,255,255,0.4) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffffff', endColorstr='#66ffffff',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+}
+#splash .title img {
+   width: 100%;
+   max-width: 500px;
+}
+#splash .button {
+   margin: 4px;
+   padding: 20px;
+   transition: 0.25s all;
+}
+#splash .row {
+   margin: auto;
+   max-width: 750px;
+}
+#splash .button:hover, #splash .button:active, #splash .button:focus {
+   margin: 0px;
+   padding: 24px;
+}
+
+/* Classes */
+.row:after {
+   content: "";
+   display: table;
+   clear: both;
+}
+.column {
+   float: left;
+   width: 50%;
+   padding: 10px;
+}
+.hr {
+   content: "";
+   clear: both;
+   height: 1px;
+   margin: 10px;
+   background: -moz-linear-gradient(left,  rgba(127,127,127,0) 0%, rgba(127,127,127,1) 50%, rgba(127,127,127,0) 100%); /* FF3.6-15 */
+   background: -webkit-linear-gradient(left,  rgba(127,127,127,0) 0%,rgba(127,127,127,1) 50%,rgba(127,127,127,0) 100%); /* Chrome10-25,Safari5.1-6 */
+   background: linear-gradient(to right,  rgba(127,127,127,0) 0%,rgba(127,127,127,1) 50%,rgba(127,127,127,0) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00dddddd', endColorstr='#00dddddd',GradientType=1 ); /* IE6-9 */
+}
+.title {
+   text-align: center;
+}
+.subtitle {
+   margin: 20px 0 20px;
+   font-size: 1.2em;
+   font-style: italic;
+   color: #111;
+   text-align: center;
+   text-shadow: 0 0 5px #FFF;
+}
+.button {
+   display: inline-block;
+   margin: 4px;
+   padding: 10px;
+   text-align: center;
+   text-decoration: none !important;
+}
+.block {
+   display: block;
+}
+.cyan-highlight {
+   background-color: #00AACC;
+   color: #FFF !important;
+}
+a.cyan-highlight:hover, a.cyan-highlight:active, a.cyan-highlight:focus {
+   background-color: #036B93;
+}
+.red-highlight {
+   background-color: #FF0000;
+   color: #FFF !important;
+}
+a.red-highlight:hover, a.red-highlight:active, a.red-highlight:focus {
+   background-color: #107245;
+}
+.cyan-highlight h1, .cyan-highlight h2, .cyan-highlight h3, .cyan-highlight h4, .cyan-highlight h5, .cyan-highlight h6, .red-highlight h1, .red-highlight h2, .red-highlight h3, .red-highlight h4, .red-highlight h5, .red-highlight h6 {
+   color: #FFF !important;
+}
+.cyan-text {
+   color: #00AACC !important;
+}
+a.cyan-text:hover, a.cyan-text:active, a.cyan-text:focus {
+   color: #036B93 !important;
+}
+.red-text {
+   color: #FF0000 !important;
+}
+a.red-text:hover, a.red-text:active, a.red-text:focus {
+   color: #107245 !important;
+}
+
+/* Media Rules */ 
+@media (max-width: 767px) {
+   .column {
+      width: 100%;
+   }
+}
+@media (max-width: 991px) {
+   #header {
+      text-align: center;
+      padding: 20px;
+   }
+   #header .title {
+      float: none;
+   }
+   #header .vertical-align-middle {
+      margin-top: 0 !important;
+   }
+}
+@media (max-width: 1199px) {
+   #header .title img {
+      height: 80px;
+   }
+}
+
+/* Bootstrap */
+.container {
+   margin-right: auto;
+   margin-left: auto;
+   padding-left: 15px;
+   padding-right: 15px;
+   transition: 0.3s width;
+}
+@media (min-width: 768px) {
+   .container {
+      width: 750px;
+   }
+}
+@media (min-width: 992px) {
+   .container {
+      width: 970px;
+   }
+}
+@media (min-width: 1200px) {
+   .container {
+      width: 1170px;
+   }
+}
+.container-fluid {
+   margin-right: auto;
+   margin-left: auto;
+   padding-left: 15px;
+   padding-right: 15px;
+}
+
+.footer{
+    background-image: url(images/tan_banner.jpg);
+}
