@@ -52,9 +52,6 @@ table {
 }
 
 /* Structure */
-#splash {
-   background-image: url(images/Books_HD_8314929977.jpg);
-}
 #page-container {
    width: 100%;
    height: auto !important;
@@ -63,31 +60,16 @@ table {
    position: absolute;
    right: 0;
    left: 0;
-}
-#splash #page-container {
    background: -moz-radial-gradient(center, ellipse cover, rgba(255,255,255,1) 0%, rgba(255,255,255,0.4) 100%); /* FF3.6-15 */
    background: -webkit-radial-gradient(center, ellipse cover, rgba(255,255,255,1) 0%,rgba(255,255,255,0.4) 100%); /* Chrome10-25,Safari5.1-6 */
    background: radial-gradient(ellipse at center, rgba(255,255,255,1) 0%,rgba(255,255,255,0.4) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffffff', endColorstr='#66ffffff',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
 }
-#splash .title img {
-   width: 100%;
-   max-width: 500px;
-}
-#splash .button {
-   margin: 4px;
-   padding: 20px;
-   transition: 0.25s all;
-}
-#splash .row {
-   margin: auto;
-}
-#splash .button:hover, #splash .button:active, #splash .button:focus {
-   margin: 0px;
-   padding: 24px;
-}
 
 /* Classes */
+.row {
+   margin: auto;
+}
 .row:after {
    content: "";
    display: table;
@@ -111,6 +93,10 @@ table {
 .title {
    text-align: center;
 }
+.title img {
+   width: 100%;
+   max-width: 500px;
+}
 .subtitle {
    margin: 20px 0 20px;
    font-size: 1.2em;
@@ -125,6 +111,15 @@ table {
    padding: 10px;
    text-align: center;
    text-decoration: none !important;
+}
+.button {
+   margin: 4px;
+   padding: 20px;
+   transition: 0.25s all;
+}
+.button:hover, .button:active, .button:focus {
+   margin: 0px;
+   padding: 24px;
 }
 .block {
    display: block;
