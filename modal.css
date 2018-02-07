@@ -28,7 +28,7 @@
   opacity: 0.3;
 }
 
-.container:hover .middle {
+.bio-container:hover .middle {
   opacity: 1;
 }
 
