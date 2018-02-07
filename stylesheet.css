@@ -80,6 +80,9 @@ table {
    width: 50%;
    padding: 10px;
 }
+.block {
+   display: block !important;
+}
 .hr {
    content: "";
    clear: both;
@@ -105,38 +108,41 @@ table {
    text-align: center;
    text-shadow: 0 0 5px #FFF;
 }
-.button {
+.box {
    display: inline-block;
    margin: 4px;
    padding: 10px;
    text-align: center;
    text-decoration: none !important;
 }
-.button {
+.box {
    margin: 4px;
    padding: 20px;
    transition: 0.25s all;
 }
-.button:hover, .button:active, .button:focus {
+.box:hover, .box:active, .box:focus {
    margin: 0px;
    padding: 24px;
-}
-.block {
-   display: block;
 }
 .cyan-highlight {
    background-color: #00AACC;
    color: #FFF !important;
+   text-shadow: 0 0 2px rgba(0,0,0,0.6);
 }
-a.cyan-highlight:hover, a.cyan-highlight:active, a.cyan-highlight:focus {
-   background-color: #036B93;
+a.cyan-highlight:hover, a.cyan-highlight:active, a.cyan-highlight:focus,
+button.cyan-highlight:hover, button.cyan-highlight:active, button.cyan-highlight:focus {
+   background-color: #0094B2;
+   text-shadow: 0 0 6px rgba(0,0,0,0.8);
 }
 .red-highlight {
    background-color: #FF0000;
    color: #FFF !important;
+   text-shadow: 0 0 2px rgba(0,0,0,0.6);
 }
-a.red-highlight:hover, a.red-highlight:active, a.red-highlight:focus {
-   background-color: #107245;
+a.red-highlight:hover, a.red-highlight:active, a.red-highlight:focus,
+button.red-highlight:hover, button.red-highlight:active, button.red-highlight:focus {
+   background-color: #E50000;
+   text-shadow: 0 0 6px rgba(0,0,0,0.8);
 }
 .cyan-highlight h1, .cyan-highlight h2, .cyan-highlight h3, .cyan-highlight h4, .cyan-highlight h5, .cyan-highlight h6, .red-highlight h1, .red-highlight h2, .red-highlight h3, .red-highlight h4, .red-highlight h5, .red-highlight h6 {
    color: #FFF !important;

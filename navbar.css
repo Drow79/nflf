@@ -61,6 +61,7 @@
     color: white; /* Add a text color */
     padding: 14px 28px; /* Add some padding */
     cursor: pointer; /* Add a pointer cursor on mouse-over */
+    transition: .2s;
 }
 
 .success {background-color: #4CAF50;} /* Green */
