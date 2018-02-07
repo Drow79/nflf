@@ -42,6 +42,7 @@ p {
 img {
    border: none;
    vertical-align: middle;
+   max-width: 600px;
 }
 iframe {
    border: none;
@@ -80,7 +81,6 @@ table {
 }
 #splash .row {
    margin: auto;
-   max-width: 750px;
 }
 #splash .button:hover, #splash .button:active, #splash .button:focus {
    margin: 0px;
@@ -157,6 +157,9 @@ a.cyan-text:hover, a.cyan-text:active, a.cyan-text:focus {
 }
 a.red-text:hover, a.red-text:active, a.red-text:focus {
    color: #107245 !important;
+}
+.author-image {
+   max-width: 200px;
 }
 
 /* Media Rules */ 
