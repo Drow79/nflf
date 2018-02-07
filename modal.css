@@ -2,6 +2,7 @@
     position: relative;
     width: 50%;
     margin: auto;
+    max-width: 200px;
 }
 
 .image {
@@ -11,7 +12,6 @@
   height: auto;
   transition: .5s ease;
   backface-visibility: hidden;
-  max-width: 200px;
 }
 
 .middle {
