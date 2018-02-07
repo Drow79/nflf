@@ -1,9 +1,10 @@
-#container {
+.bio-container {
     position: relative;
     width: 50%;
+    margin: auto;
 }
 
-#image {
+.image {
   opacity: 1;
   display: block;
   width: 100%;
@@ -12,7 +13,7 @@
   backface-visibility: hidden;
 }
 
-#middle {
+.middle {
   transition: .5s ease;
   opacity: 0;
   position: absolute;
@@ -23,16 +24,16 @@
   text-align: center;
 }
 
-#container:hover .image {
+.bio-container:hover .image {
   opacity: 0.3;
 }
 
-#container:hover .middle {
+.container:hover .middle {
   opacity: 1;
 }
 
-#text {
-  background-color: #4CAF50;
+.text {
+  background-color: #036B93;
   color: white;
   font-size: 16px;
   padding: 16px 32px;
