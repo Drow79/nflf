@@ -46,7 +46,7 @@
         
         `  <center>
           <p>Fill out the form below to send an email.</p>
-		  <form method="post" action="<?php echo $_SERVER['PHP_SELF'];?>">
+		  <form method="post" action="<?php echo $_SERVER['PHP_SELF']; ?>">
 			Name:<br />
 			<input type="text" name="fname" value="Name" size="50" /><br />
 			E-mail:<br />
@@ -68,7 +68,7 @@
                     $subject = $fname . " " . $fmail;
                     mail($to,$subject,$ftext,$fmail);
                     }
-                    ?>
+                ?>
          <div class="hr"></div>
        <p class="subtitle">Hosted by <img src="images/tan_banner.png" style="height: 5em"></p>
       </div>
