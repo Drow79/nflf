@@ -32,10 +32,10 @@
                     <a href="index.html">Home</a>
                     <a href="authors.html">Authors</a>
                     <a href="events.html">Event Schedule</a>
-                    <a href="tan.html">TAN</a>
+                    <!-- <a href="tan.html">TAN</a> -->
                     <a href="about.html">About Us</a>
-                    <a href="vendors.html">Vendor Info</a>
-                    <a href="sponsors.html">Sponsors</a>
+                    <!-- <a href="vendors.html">Vendor Info</a> -->
+                    <!-- <a href="sponsors.html">Sponsors</a> -->
                 </div>
 
             </div>
@@ -44,8 +44,31 @@
            <center><button class="btn cyan-highlight" onclick="openNav()">&#9776; Open Navagation</button></center>
          <div class="hr"></div>
         
-        <p class="subtitle">The Contact us page.</p>
-        
+        `  <center>
+          <p>Fill out the form below to send an email.</p>
+		  <form method="post" action="<?php echo $_SERVER['PHP_SELF'];?>">
+			Name:<br />
+			<input type="text" name="fname" value="Name" size="50" /><br />
+			E-mail:<br />
+			<input type="text" name="fmail" value="Your E-mail" size="50" /><br /><br />
+			Comment:<br />
+			<textarea name="ftext"  rows="20" cols="40">Your question or message here</textarea><br /><br />
+			<input type="submit" value="Send" />
+			<input type="reset" value="Reset" />
+			</form></center>
+                <?php
+                    if ($_SERVER["REQUEST_METHOD"] == "POST") {
+                    // collect value of fields
+                    $fname = $_POST['fname'];
+                    $fmail = $_POST['fmail'];
+                    $ftext = $_POST['ftext'];
+                    //set destination
+                    $to = "northfloridaliteracyfestival@gmail.com";
+                    //make subject
+                    $subject = $fname . " " . $fmail;
+                    mail($to,$subject,$ftext,$fmail)
+                    }
+                    ?>
          <div class="hr"></div>
        <p class="subtitle">Hosted by <img src="images/tan_banner.png" style="height: 5em"></p>
       </div>
