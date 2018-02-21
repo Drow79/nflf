@@ -11,7 +11,7 @@ $(document).ready(function() {
    }, 300);
    
    var contentBoxHeight,
-       contentBoxPadding = parseFloat($('.content-box').css('padding'));
+       contentBoxPadding = parseFloat($('.content-box').css('padding-bottom'));
    /* content-box Hover Enter Event */
    $(".content-box").hover(function(){
       contentBoxHeight = parseFloat($(this).css('height'));
@@ -39,15 +39,15 @@ function updateVerticalAlignment() {
    $('.vertical-align-middle').css('margin-top', elementTopAnchor);
 }
 
-function updateVerticalSizing() {
+function updateVerticalSizing() {   
    $('.column').css('height','auto');
    $('.content-box').css('height','auto');
    $('.column').each(function(index,element){
       $(element).css('height',$(element).parent().innerHeight());
    });
    $('.content-box').each(function(index,element){
-      $(element).css('height',$(element).parent().innerHeight() - parseFloat($(element).parent().css('padding')) * 2);
-      //console.log($(element).parent().innerHeight() - parseInt($(element).css('padding')) * 2);
+      $(element).css('height',$(element).parent().innerHeight() - parseFloat($(element).parent().css('padding-top')) - parseFloat($(element).parent().css('padding-bottom')));
+      //console.log($(element).parent().innerHeight() - parseFloat($(element).css('padding-top')) - parseFloat($(element).parent().css('padding-bottom')));
    });
 }
 
