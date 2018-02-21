@@ -4,21 +4,51 @@
 $(document).ready(function() {
    
    updateVerticalAlignment();
+   updateVerticalSizing();
+   setTimeout(function() {
+      updateVerticalAlignment();
+      updateVerticalSizing();
+   }, 300);
+   
+   var contentBoxHeight,
+       contentBoxPadding = parseFloat($('.content-box').css('padding'));
+   /* content-box Hover Enter Event */
+   $(".content-box").hover(function(){
+      contentBoxHeight = parseFloat($(this).css('height'));
+      $(this).css('height', contentBoxHeight + contentBoxPadding / 2);
+   },
+   /* content-box Hover Exit Event */
+   function(){
+      $(this).css('height', contentBoxHeight);
+   });
    
    /* Window Resize Event */
    $(window).resize(function() {
       updateVerticalAlignment();
+      updateVerticalSizing();
+      setTimeout(function() {
+         updateVerticalAlignment();
+         updateVerticalSizing();
+      }, 300);
    });
    
 });
 
 function updateVerticalAlignment() {
-   elementTop = ($(".vertical-align-middle").parent().height() / 2) - ($(".vertical-align-middle").height() / 2);
-   $(".vertical-align-middle").css('margin-top', elementTop);
-   setTimeout(function() {
-      elementTop = ($(".vertical-align-middle").parent().height() / 2) - ($(".vertical-align-middle").height() / 2);
-      $(".vertical-align-middle").css('margin-top', elementTop);
-   }, 300);  
+   var elementTopAnchor = ($('.vertical-align-middle').parent().height() / 2) - ($('.vertical-align-middle').height() / 2);
+   $('.vertical-align-middle').css('margin-top', elementTopAnchor);
+}
+
+function updateVerticalSizing() {
+   $('.column').css('height','auto');
+   $('.content-box').css('height','auto');
+   $('.column').each(function(index,element){
+      $(element).css('height',$(element).parent().innerHeight());
+   });
+   $('.content-box').each(function(index,element){
+      $(element).css('height',$(element).parent().innerHeight() - parseFloat($(element).parent().css('padding')) * 2);
+      //console.log($(element).parent().innerHeight() - parseInt($(element).css('padding')) * 2);
+   });
 }
 
 /* Open */

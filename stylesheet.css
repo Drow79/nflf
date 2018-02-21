@@ -108,19 +108,14 @@ table {
    text-align: center;
    text-shadow: 0 0 5px #FFF;
 }
-.box {
-   display: inline-block;
-   margin: 4px;
-   padding: 10px;
-   text-align: center;
-   text-decoration: none !important;
-}
-.box {
+.content-box {
+   display: block;
    margin: 4px;
    padding: 20px;
+   text-align: center;
    transition: 0.25s all;
 }
-.box:hover, .box:active, .box:focus {
+.content-box:hover, .content-box:active, .content-box:focus {
    margin: 0px;
    padding: 24px;
 }
@@ -167,6 +162,7 @@ a.red-text:hover, a.red-text:active, a.red-text:focus {
 @media (max-width: 767px) {
    .column {
       width: 100%;
+      height: auto !important;
    }
 }
 @media (max-width: 991px) {
