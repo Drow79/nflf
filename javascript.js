@@ -3,6 +3,7 @@
 
 $(document).ready(function() {
    
+   console.log("Document ready");
    updateVerticalAlignment();
    updateVerticalSizing();
    setTimeout(function() {
@@ -32,6 +33,10 @@ $(document).ready(function() {
       }, 300);
    });
    
+});
+
+$(window).on('load', function() {
+   console.log("Window loaded");
 });
 
 function updateVerticalAlignment() {
