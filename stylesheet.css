@@ -162,6 +162,8 @@ a.red-text:hover, a.red-text:active, a.red-text:focus {
 @media (max-width: 767px) {
    .column {
       width: 100%;
+   }
+   .column, .max-height {
       height: auto !important;
    }
 }

@@ -6,22 +6,6 @@ $(document).ready(function() {
    console.log("Document ready");
    updateVerticalAlignment();
    updateVerticalSizing();
-   setTimeout(function() {
-      updateVerticalAlignment();
-      updateVerticalSizing();
-   }, 300);
-   
-   var contentBoxHeight,
-       contentBoxPadding = parseFloat($('.content-box').css('padding-bottom'));
-   /* content-box Hover Enter Event */
-   $(".content-box").hover(function(){
-      contentBoxHeight = parseFloat($(this).css('height'));
-      $(this).css('height', contentBoxHeight + contentBoxPadding / 2);
-   },
-   /* content-box Hover Exit Event */
-   function(){
-      $(this).css('height', contentBoxHeight);
-   });
    
    /* Window Resize Event */
    $(window).resize(function() {
@@ -36,7 +20,23 @@ $(document).ready(function() {
 });
 
 $(window).on('load', function() {
+   
    console.log("Window loaded");
+   updateVerticalAlignment();
+   updateVerticalSizing();
+   
+   var contentBoxHeight,
+       contentBoxPadding = parseFloat($('.content-box').css('padding-bottom'));
+   /* content-box Hover Enter Event */
+   $(".content-box").hover(function(){
+      contentBoxHeight = parseFloat($(this).css('height'));
+      $(this).css('height', contentBoxHeight + contentBoxPadding / 2);
+   },
+   /* content-box Hover Exit Event */
+   function(){
+      $(this).css('height', contentBoxHeight);
+   });
+   
 });
 
 function updateVerticalAlignment() {
@@ -44,15 +44,14 @@ function updateVerticalAlignment() {
    $('.vertical-align-middle').css('margin-top', elementTopAnchor);
 }
 
-function updateVerticalSizing() {   
+function updateVerticalSizing() {
    $('.column').css('height','auto');
-   $('.content-box').css('height','auto');
-   $('.column').each(function(index,element){
+   $('.max-height').css('height','auto');
+   $('.column').each(function(index,element) {
       $(element).css('height',$(element).parent().innerHeight());
    });
-   $('.content-box').each(function(index,element){
-      $(element).css('height',$(element).parent().innerHeight() - parseFloat($(element).parent().css('padding-top')) - parseFloat($(element).parent().css('padding-bottom')));
-      //console.log($(element).parent().innerHeight() - parseFloat($(element).css('padding-top')) - parseFloat($(element).parent().css('padding-bottom')));
+   $('.max-height').each(function(index,element) {
+      $(element).css('height',$(element).parent().innerHeight() - (parseFloat($(element).parent().css('padding-top')) + parseFloat($(element).parent().css('padding-bottom')) + parseFloat($(element).css('margin-top')) + parseFloat($(element).css('margin-top'))));
    });
 }
 
