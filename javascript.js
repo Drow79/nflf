@@ -4,26 +4,14 @@
 $(document).ready(function() {
    
    console.log("Document ready");
-   updateVerticalAlignment();
-   updateVerticalSizing();
-   
-   /* Window Resize Event */
-   $(window).resize(function() {
-      updateVerticalAlignment();
-      updateVerticalSizing();
-      setTimeout(function() {
-         updateVerticalAlignment();
-         updateVerticalSizing();
-      }, 300);
-   });
    
 });
 
 $(window).on('load', function() {
    
    console.log("Window loaded");
-   updateVerticalAlignment();
    updateVerticalSizing();
+   updateVerticalAlignment();
    
    var contentBoxHeight,
        contentBoxPadding = parseFloat($('.content-box').css('padding-bottom'));
@@ -37,10 +25,21 @@ $(window).on('load', function() {
       $(this).css('height', contentBoxHeight);
    });
    
+   /* Window Resize Event */
+   $(window).resize(function() {
+      updateVerticalSizing();
+      updateVerticalAlignment();
+      setTimeout(function() {
+         updateVerticalSizing();
+         updateVerticalAlignment();
+      }, 300);
+   });
+   
 });
 
 function updateVerticalAlignment() {
    var elementTopAnchor = ($('.vertical-align-middle').parent().height() / 2) - ($('.vertical-align-middle').height() / 2);
+   //console.log(elementTopAnchor, $('.vertical-align-middle').parent().height(), $('.vertical-align-middle').height() );
    $('.vertical-align-middle').css('margin-top', elementTopAnchor);
 }
 

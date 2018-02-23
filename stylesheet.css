@@ -65,6 +65,9 @@ table {
    background: radial-gradient(ellipse at center, rgba(255,255,255,1) 0%,rgba(255,255,255,0.4) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffffff', endColorstr='#66ffffff',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
 }
+#page {
+   padding: 20px 10px !important;
+}
 
 /* Classes */
 .row {
