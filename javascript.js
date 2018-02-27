@@ -38,9 +38,9 @@ $(window).on('load', function() {
 });
 
 function updateVerticalAlignment() {
-   var elementTopAnchor = ($('.vertical-align-middle').parent().height() / 2) - ($('.vertical-align-middle').height() / 2);
-   //console.log(elementTopAnchor, $('.vertical-align-middle').parent().height(), $('.vertical-align-middle').height() );
-   $('.vertical-align-middle').css('margin-top', elementTopAnchor);
+   $('.vertical-align-middle').each(function(index,element) {
+      $(element).css('margin-top', ($(element).parent().outerHeight() / 2) - ($(element).outerHeight() / 2));
+   });
 }
 
 function updateVerticalSizing() {
