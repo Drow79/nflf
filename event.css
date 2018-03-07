@@ -46,3 +46,8 @@ body {font-family: "Lato", sans-serif;}
     color: #FFFFFF;
     background-color: #e50000;
 }
+
+.tabcontent img{
+    height: 60%;
+    width: 60%;
+}
