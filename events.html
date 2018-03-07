@@ -10,6 +10,7 @@
     <link href="stylesheet.css" rel="stylesheet">
     <link href="navbar.css" rel="stylesheet">
     <link href="sponbtn.css" rel="stylesheet">
+    <link href="event.css" rel="stylesheet">
     <script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.11.1.min.js"></script>
     <script src="javascript.js" type="text/javascript"></script>
 </head>
@@ -93,22 +94,59 @@
                 <button class="btnspon cyan-highlight" onclick="openSponBtn()">&#9776; Want to become a Sponsor?</button>
             </center>
          <div class="hr"></div>
-            <h3 style="color:black">Saturday August 18, 2018</h3>
-            <br /><br />
-            <p>Throughout the day there will be vendors in the vendor room selling books and a variety of items.  In the success center there will be free childrens activities.</p>
-            <br />
-            <p>9:00 A.M. Open to the Public</p>
-            <p>9:00 A.M. Prayer from Pastor Clarence</p>
-            <p>9:30 A.M. Childrens Book Reading - The Success Center</p>
-            <p>10:00 A.M. Andew Skerritt's 5 secrets to nonfiction storytelling Workshop - Sanctuary Conference Room</p>
-            <p>10:30 A.M. TBA - The Success Center</p>
-            <p>11:30 A.M. Childrens Book Reading - The Success Center</p>
-            <p>1:30 P.M. Schedule Keynote Speaker - Sanctuary Conference Room</p>
-            <p>3:00 P.M. Nutrition Workshop with Leslie Warren - Sanctuary Conference Room</p>
-            <p>3:15 P.M. Childrens Book Reading - The Success Center</p>
-            <p>4:00 P.M. Concludes the Day</p>
-        
-         <div class="hr"></div>
+            <div class="tab">
+                <button class="tablinks" onclick="openCity(event, 'date')" id="defaultOpen">Saturday August 18, 2018</button>
+                <button class="tablinks" onclick="openCity(event, '1')">9:00 A.M.</button>
+                <button class="tablinks" onclick="openCity(event, '2')">9:30 A.M.</button>
+                <button class="tablinks" onclick="openCity(event, '3')">10:00 A.M.</button>
+                <button class="tablinks" onclick="openCity(event, '4')">10:30 A.M.</button>
+                <button class="tablinks" onclick="openCity(event, '5')">11:30 A.M.</button>
+                <button class="tablinks" onclick="openCity(event, '6')">1:30 A.M.</button>
+                <button class="tablinks" onclick="openCity(event, '7')">3:00 A.M.</button>
+                <button class="tablinks" onclick="openCity(event, '8')">3:15 A.M.</button>
+                <button class="tablinks" onclick="openCity(event, '9')">4:00 A.M.</button>
+            </div>
+            <div id="date" class="tabcontent">
+                <h3>Welcome to the North Florida Literacy Festival</h3>
+                <p>Throughout the day there will be vendors in the vendor room selling books and a variety of items.  In the success center there will be free childrens activities.</p>
+            </div>
+            <div id="1" class="tabcontent">
+                <p>Open to the Public</p><br />
+                <p>Prayer from Pastor Clarence</p>
+            </div>
+            <div id="2" class="tabcontent">
+                <h3>Childrens Book Reading</h3><br />
+                <p>The Success Center</p>
+            </div>
+            <div id="3" class="tabcontent">
+                <h3>Andew Skerritt's 5 secrets to nonfiction storytelling Workshop</h3><br />
+                <img src="images/andrew_skerritt.jpg">
+                <p>Sanctuary Conference Room</p>
+            </div>
+            <div id="4" class="tabcontent">
+                <h3>TBA</h3><br />
+                <p>The Success Center</p>
+            </div>
+            <div id="5" class="tabcontent">
+                <h3>Childrens Book Reading</h3><br />
+                <p>The Success Center</p>
+            </div>
+            <div id="6" class="tabcontent">
+                <h3>Schedule Keynote Speaker</h3><br />
+                <p>Sanctuary Conference Room</p>
+            </div>
+            <div id="7" class="tabcontent">
+                <h3>Nutrition Workshop with Leslie Warren</h3><br />
+                <p>Sanctuary Conference Room</p>
+            </div>
+            <div id="8" class="tabcontent">
+                <h3>Childrens Book Reading</h3><br />
+                <p>The Success Center</p>
+            </div>
+            <div id="9" class="tabcontent">
+                <h3>Concludes the Day</h3>
+            </div>
+        <div class="hr"></div>
        <p class="subtitle">Hosted by <img src="images/tan_banner.png" style="height: 5em"></p>
       </div>
 	</div>
