@@ -16,7 +16,7 @@ $(window).on('load', function() {
    var contentBoxHeight,
        contentBoxPadding = parseFloat($('.content-box').css('padding-bottom'));
    /* content-box Hover Enter Event */
-   $(".content-box").hover(function(){
+   $(".content-box.max-height").hover(function(){
       contentBoxHeight = parseFloat($(this).css('height'));
       $(this).css('height', contentBoxHeight + contentBoxPadding / 2);
    },
