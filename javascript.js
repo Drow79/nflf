@@ -63,3 +63,13 @@ function openNav() {
 function closeNav() {
     document.getElementById("myNav").style.width = "0%";
 }
+
+/* Open */
+function openSponBtn() {
+    document.getElementById("mySponBtn").style.width = "100%";
+}
+
+/* Close */
+function closeSponBtn() {
+    document.getElementById("mySponBtn").style.width = "0%";
+}
