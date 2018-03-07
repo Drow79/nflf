@@ -95,16 +95,16 @@
             </center>
          <div class="hr"></div>
             <div class="tab">
-                <button class="tablinks" onclick="openCity(event, 'date')" id="defaultOpen">Saturday August 18, 2018</button>
-                <button class="tablinks" onclick="openCity(event, '1')">9:00 A.M.</button>
-                <button class="tablinks" onclick="openCity(event, '2')">9:30 A.M.</button>
-                <button class="tablinks" onclick="openCity(event, '3')">10:00 A.M.</button>
-                <button class="tablinks" onclick="openCity(event, '4')">10:30 A.M.</button>
-                <button class="tablinks" onclick="openCity(event, '5')">11:30 A.M.</button>
-                <button class="tablinks" onclick="openCity(event, '6')">1:30 A.M.</button>
-                <button class="tablinks" onclick="openCity(event, '7')">3:00 A.M.</button>
-                <button class="tablinks" onclick="openCity(event, '8')">3:15 A.M.</button>
-                <button class="tablinks" onclick="openCity(event, '9')">4:00 A.M.</button>
+                <button class="tablinks" onclick="openTab(event, 'date')" id="defaultOpen">Saturday August 18, 2018</button>
+                <button class="tablinks" onclick="openTab(event, '1')">9:00 A.M.</button>
+                <button class="tablinks" onclick="openTab(event, '2')">9:30 A.M.</button>
+                <button class="tablinks" onclick="openTab(event, '3')">10:00 A.M.</button>
+                <button class="tablinks" onclick="openTab(event, '4')">10:30 A.M.</button>
+                <button class="tablinks" onclick="openTab(event, '5')">11:30 A.M.</button>
+                <button class="tablinks" onclick="openTab(event, '6')">1:30 A.M.</button>
+                <button class="tablinks" onclick="openTab(event, '7')">3:00 A.M.</button>
+                <button class="tablinks" onclick="openTab(event, '8')">3:15 A.M.</button>
+                <button class="tablinks" onclick="openTab(event, '9')">4:00 A.M.</button>
             </div>
             <div id="date" class="tabcontent">
                 <h3>Welcome to the North Florida Literacy Festival</h3><br />
@@ -147,10 +147,7 @@
                 <h3>Concludes the Day</h3>
             </div>
         <script language="javascript">
-            openCity('', 'date'); 
-            $(document).ready(function() {
-                openCity('', 'date');    
-            });
+            document.getElementById("defaultOpen").click();
         </script>
         <div class="hr"></div>
        <p class="subtitle">Hosted by <img src="images/tan_banner.png" style="height: 5em"></p>
